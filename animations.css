@@ -1,0 +1,102 @@
+.rocket{
+	animation: item-stay-moves 2s infinite ease-in-out;
+	/*animation: item-moves;
+	animation-duration: 2s;
+	animation-iteration-count: 2;*/
+}
+
+
+.r1{
+	animation:rocket-planet 2s 19s forwards ease-in-out;
+}
+.cody {
+	animation: item-stay-moves 2s infinite ease-in-out,
+				move-cody 2s 6s ease-in-out,
+				cody-onboard 2s 17s  ease-in-out forwards;
+/*						delaltime and anima time*/
+	animation-fill-mode: forwards;
+
+}
+
+body{
+	animation: background-move 6s ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+.conv1{
+	animation: conversations 2s 8s ease-in-out,
+				item-stay-moves 2s infinite ease-in-out;
+}
+
+.conv2{
+	animation: conversations 2s 10s ease-in-out,
+				item-stay-moves 2s infinite ease-in-out;
+}
+
+.conv3{
+	animation: conversations 2s 12s ease-in-out,
+				item-stay-moves 2s infinite ease-in-out;
+}
+
+.conv4{
+	animation: conversations 2s 14s ease-in-out,
+				item-stay-moves 2s infinite ease-in-out;
+}
+
+@keyframes rocket-planet{
+	20%{
+		transform: rotateZ(-45deg);
+	}
+	100%{
+		/*transform: rotateZ(-90deg);*/
+
+		top:-1000px;
+	}
+}
+@keyframes cody-onboard{
+	0%{
+		left:15%;
+	}
+	100%{
+		left:25%;
+		opacity: 0;
+	}
+}
+@keyframes conversations{
+	
+	40%,
+	90%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+@keyframes move-cody{
+	0%{
+		left:-15%;
+	}
+	100%{
+		left:15%;
+	}
+}
+@keyframes background-move{
+	0%{
+		background-position: 100px -10%;
+	}
+
+	100%{
+		background-position: -5000px 10%;
+	}
+}
+@keyframes item-stay-moves{
+	/*0%{
+		transform: translate(0);
+	}*/
+	50%{
+		transform: translateY(-10px);
+	}
+	/*100%{
+		transform: translateY(0);
+	}*/
+}
